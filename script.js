@@ -1,5 +1,5 @@
 // efeito digitando
-const text = "Eu te amo ❤";
+const text = "Eu te amo Lala❤";
 let i = 0;
 const typing = document.getElementById("typing");
 
@@ -41,3 +41,4 @@ btn.addEventListener("click", async () => {
 
 // tentar autoplay (alguns celulares bloqueiam)
 audio.play().then(() => btn.style.display = "none").catch(() => {});
+
