@@ -1,0 +1,81 @@
+/* Fundo animado */
+body {
+  background: linear-gradient(270deg, #ffe6f0, #ffccd5, #ffcce0);
+  background-size: 600% 600%;
+  animation: bgAnimation 12s ease infinite;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  overflow: hidden;
+  text-align: center;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container central */
+.container {
+  z-index: 2;
+  color: #e75480;
+}
+
+/* Texto digitando */
+h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+  border-right: 3px solid #e75480;
+  overflow: hidden;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #b03060;
+}
+
+/* Botão de música */
+#playBtn {
+  margin-top: 15px;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+#playBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Corações caindo */
+.heart {
+  position: absolute;
+  top: -10vh;
+  color: #ff4d6d;
+  animation: fall linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  p { font-size: 1rem; }
+  #playBtn { width: 50px; height: 50px; font-size: 1.2rem; }
+}
